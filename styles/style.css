@@ -1,0 +1,422 @@
+/* Global Reset */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Variables */
+:root {
+    --background-main: #0A0F1F;
+    --background-secondary: #1C2333;
+    --background-hover: #2D3756;
+  
+    --text-primary: #FFFFFF;
+    --text-secondary: #B3B8C5;
+    
+    --spacing1: 4px;
+    --spacing2: 8px;
+    --spacing3: 16px;
+    --spacing4: 20px;
+    --spacing5: 40px;
+    --spacing6: 80px;
+    --spacing7: 160px;
+
+    --font-xs: 14px;  
+    --font-sm: 16px;
+    --font-base: 18px; 
+    --font-md: 20px;  
+    --font-lg: 24px;  
+    --font-xl: 32px;
+    --font-xxl: 40px;
+
+    --font-regular: 400;
+    --font-medium: 500;
+    --font-bold: 700;
+}
+
+body {
+    font-family: 'Roboto', 'Verdana', 'Tahoma', sans-serif;
+    font-size: var(--font-base);     /* 18px */
+    font-weight: var(--font-regular);
+    line-height: 1.6;
+}
+  
+h1, h2, h3, h4 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: var(--font-bold);
+    line-height: 1.2;
+}
+  
+h1 {
+    font-size: var(--font-xxl);
+}
+h2 {
+    font-size: var(--font-xl);
+}
+h3 {
+    font-size: var(--font-lg);
+}
+h4 {
+    font-size: var(--font-md);
+}
+
+p, span, label {
+    font-family: 'Roboto', sans-serif;
+    font-size: var(--font-base);
+}
+
+/* Utility Classes */
+.test {
+    border: 1px solid white;
+}
+
+.center {
+    text-align: center;
+}
+
+.card {
+    background-color: var(--background-main);
+    border: 1px solid var(--background-secondary);
+    border-radius: 12px;
+    padding: 1rem;
+    transition: background-color 0.3s ease;
+} 
+
+.card:hover {
+    background-color: var(--background-secondary);
+}
+
+.flex {
+    display: flex;
+}
+
+
+.flex-row {
+    flex-direction: row;
+}
+
+.flex-col {
+    flex-direction: column;
+}
+
+.items-start {
+    align-items: flex-start;
+}
+
+.items-center {
+    align-items: center;
+}
+
+.items-end {
+    align-items: flex-end;
+}
+
+.justify-start {
+    justify-content: flex-start;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.justify-between {
+    justify-content: space-between;
+}
+
+.justify-around {
+    justify-content: space-around;
+}
+
+.justify-evenly {
+    justify-content: space-evenly;
+}
+
+.justify-end {
+    justify-content: flex-end;
+}
+
+.reverse {
+    flex-direction: row-reverse;
+}
+
+.gap1{
+    gap: var(--spacing1);
+}
+
+.gap2{
+    gap: var(--spacing2);
+}
+
+.gap3{
+    gap: var(--spacing3);
+}
+
+.gap4{
+    gap: var(--spacing4);
+}
+
+.gap5{
+    gap: var(--spacing5);
+}
+
+.gap6{
+    gap: var(--spacing6);
+}
+
+.bg-main {
+    background-color: var(--background-main);
+}
+
+.bg-secondary {
+    background-color: var(--background-secondary);
+}
+
+.text-bold {
+    font-weight: bold;
+}
+
+.padding1 {
+    padding: var(--spacing1) 0;
+}
+
+.padding2 {
+    padding: var(--spacing2) 0;
+}
+
+.padding3 {
+    padding: var(--spacing3) 0;
+}
+
+.padding4 {
+    padding: var(--spacing4) 0;
+}
+
+.padding5 {
+    padding: var(--spacing5) 0;
+}
+
+.padding6 {
+    padding: var(--spacing6) 0;
+}
+
+.padding7 {
+    padding: var(--spacing7) 0;
+}
+
+.margin1 {
+    margin: var(--spacing1) auto;
+}
+
+.margin2 {
+    margin: var(--spacing2) auto;
+}
+
+.margin3 {
+    margin: var(--spacing3) auto;
+}
+
+.margin4 {  
+    margin: var(--spacing4) auto;
+}
+
+.margin5 {
+    margin: var(--spacing5) auto;
+}
+
+.margin6 {
+    margin: var(--spacing6) auto;
+}
+
+.margin7 {
+    margin: var(--spacing7) auto;
+}
+
+.margin-left1 {
+    margin-left: var(--spacing1);
+}
+
+.margin-left2 {
+    margin-left: var(--spacing2);
+}
+
+.margin-left3 {
+    margin-left: var(--spacing3);
+}
+
+.margin-left4 {
+    margin-left: var(--spacing4);
+}
+
+.margin-left5 {
+    margin-left: var(--spacing5);
+}
+
+.margin-right1 {
+    margin-right: var(--spacing1);
+}
+
+.margin-right2 {
+    margin-right: var(--spacing2);
+}
+
+.margin-right3 {
+    margin-right: var(--spacing3);
+}
+
+.margin-right4 {
+    margin-right: var(--spacing4);
+}
+
+.margin-right5 {
+    margin-right: var(--spacing5);
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+.auto_w{
+    width: auto;
+}
+
+.auto_h{
+    height: auto;
+}
+
+.auto_w_h{
+    width: auto;
+    height: auto;
+}
+
+.padding-x4{
+    padding-left: var(--spacing4);
+    padding-right: var(--spacing4);
+}
+
+/* Global Styles */
+body {
+    text-wrap: balance;
+    background-color: var(--background-main);
+    color: var(--text-primary);  
+}
+
+h1, h2, h3, h4 {
+    margin: var(--spacing2) 0;
+    color: var(--text-primary);
+    font-weight: bold;
+}
+
+p, span, label {
+    color: var(--text-secondary);
+}
+figcaption {
+    font-size: 14px;
+    color: var(--text-secondary);
+    margin-top: 2px;
+    text-align: center;
+}
+a {
+    color: var(--text-primary);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--text-secondary);  
+    opacity: 0.8;
+}
+
+a:active {
+    color: var(--text-primary);
+    opacity: 0.8;
+}
+
+button {
+    background: var(--background-secondary);
+    color: var(--text-primary);
+    padding: var(--spacing2) var(--spacing3);
+    border: none;
+    border-radius: var(--spacing2);
+    cursor: pointer;
+    transition: box-shadow 0.3s ease;
+    font-weight: bold;
+}
+
+button:hover {
+    box-shadow: 0 0 var(--spacing3) var(--text-secondary);
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav a {
+    text-decoration: underline;
+    color: var(--text-primary);
+}
+
+nav a:hover,
+nav a:focus {
+  color: var(--text-secondary);
+  outline: 2px solid var(--text-secondary); 
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+}
+
+input, textarea, select {
+    background-color: var(--background-secondary);
+    color: var(--text-primary);
+    border: 1px solid var(--background-hover);
+    padding: var(--spacing2);
+    border-radius: var(--spacing2);
+    width: 100%;
+    font-size: var(--spacing3);
+}
+  
+input::placeholder, textarea::placeholder {
+    color: var(--text-secondary);
+}
+  
+input:focus, textarea:focus, select:focus {
+    outline: 2px solid var(--text-secondary);
+}
+  
+input[type="radio"]:focus{
+    box-shadow: none;
+}
+
+/*id*/
+
+#icone{
+    width: 75px;
+    border-radius: 50%;
+}
+
+#neil{
+    width: 200px;
+}
+
+#racemoon{
+    width: 60vw;
+}
+
+#nasa{
+    width: 100px;
+}
+
+#cosmos{
+    width: 100px;
+}
+
+.w80{
+    width: 80%;
+}
+
+.w60{
+    width: 60%;
+}
+
